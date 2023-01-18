@@ -568,26 +568,55 @@ function NfeModel (content) {
 
     valorDuplicata: function () {
       return value(xml.tagValue('vDup'))
-    }
-
-    /*
-
-   : function()   {
-      return xml.tagValue('marca');
     },
 
-   : function()   {
-      return xml.tagValue('marca');
+    //---                  my implements                 --//
+
+    // duplicada cobranca
+    cobrFatura: function () {
+      return value(xml.tagValue('fat'))
     },
 
-   : function()   {
-      return xml.tagValue('marca');
+    nFatura: function () {
+      return value(xml.tagValue('nFat'))
     },
 
-   : function()   {
-      return xml.tagValue('marca');
+    vOrigem: function () {
+      return value(xml.tagValue('vOrig'))
     },
-  */
+    
+    vDesconto: function () {
+      return value(xml.tagValue('vDesc'))
+    },
+    
+    vLiquido: function () {
+      return value(xml.tagValue('vLiq'))
+    },
+    
+    // duplicada pagamento
+    pagamento: function () {
+      return value(xml.tagValue('pag'))
+    },
 
+    indPagamento: function () {
+      return value(xml.tagValue('indPag'))
+    },
+
+    tPagamento: function () {
+      return value(xml.tagValue('tPag'))
+    },
+
+    vPagamento: function () {
+      return value(xml.tagValue('vPag'))
+    },
+
+    // outros 
+    descricaoStatusResposta: function () {
+      return value(xml.tagValue('xMotivo'))
+    },
+    
+    valorTotalItem: function () {
+      return value(xml.tagValue('vProd'))
+    },
   }
 }
